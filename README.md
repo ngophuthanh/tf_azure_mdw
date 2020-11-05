@@ -23,9 +23,23 @@ More info on the Azure modern data warehouse architecture can be found here: htt
 ![alt text](https://github.com/kylgrn/tf_azure_mdw/blob/master/Diagram.png)
 
 ## Usage
+Follow Terraform on Azure processes for deployment and secure state storage. The steps are as follows:
 
+1) Create a new Service Principal in Azure for Terraform
+   See: https://docs.microsoft.com/en-us/azure/developer/terraform/get-started-cloud-shell
+2) Clone this repository to your local workstation
+3) Define the variables in "terraform.tfvars"
+4) Run 
+    Terraform Validate
+5) Once validate is successful, run:
+    Terraform Plan
+6) Review Output, if all is well, run: 
+    Terraform Apply
+7) Approve the apply by typing "yes"
+8) Destroy using:
+    Terraform Destroy
 
-
+### Variables (terraform.tfvars)
     #Connection variables
     subscription_id = ""
     client_id       = ""
